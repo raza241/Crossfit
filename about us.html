@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/all.css" />
+<link rel="stylesheet" type="text/css" href="css/media query.css" />
+<link rel="stylesheet" type="text/css" href="css/hover.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('#sidemenu a').on('click', function(e){
+    e.preventDefault();
+
+    if($(this).hasClass('open')) {
+      // do nothing because the link is already open
+    } else {
+      var oldcontent = $('#sidemenu a.open').attr('href');
+      var newcontent = $(this).attr('href');
+      
+      $(oldcontent).fadeOut('fast', function(){
+        $(newcontent).fadeIn().removeClass('hidden');
+        $(oldcontent).addClass('hidden');
+      });
+      
+     
+      $('#sidemenu a').removeClass('open');
+      $(this).addClass('open');
+    }
+  });
+});
+ jQuery(document).ready(function(){
+    	jQuery(".menu-trigger").click(function(){
+        	jQuery("#nav").slideToggle();
+          });
+    });
+	
+	$(document).ready(function(){
+  var animTime = 300,
+      clickPolice = false;
+  
+  $(document).on('touchstart click', '.acc-btn', function(){
+    if(!clickPolice){
+       clickPolice = true;
+      
+      var currIndex = $(this).index('.acc-btn'),
+          targetHeight = $('.acc-content-inner').eq(currIndex).outerHeight();
+   
+      $('.acc-btn h1').removeClass('selected');
+      $(this).find('h1').addClass('selected');
+      
+      $('.acc-content').stop().animate({ height: 0 }, animTime);
+      $('.acc-content').eq(currIndex).stop().animate({ height: targetHeight }, animTime);
+
+      setTimeout(function(){ clickPolice = false; }, animTime);
+    }
+    
+  });
+  
+});
+</script>
+<title>About Us</title>
+</head>
+<body>
+	<div id="header">
+    	<img class="image" src="images/bg-header.png" alt=""/>
+        	<div class="holder">
+               <div class="holder-2">
+               		<div class="holder-3">
+                    	<div class="contact">
+                    		<div class="contact-image">
+                            	<img src="images/hotline.png" alt=""/>
+                           	</div>
+                    		<div class="contact-number">
+                            		<span>Call us on</span>
+                    				<strong>9300 2506</strong>
+                                </div>
+                		</div>
+                        <div class="social-icon">
+                    		<ul>
+								<li><a class="facebook" href="#"></a></li>
+                    			<li><a class="tweeter" href="#"></a></li>
+                    			<li><a class="youtube" href="#"></a></li>
+                    			<li><a class="google" href="#"></a></li>
+							</ul>
+                		</div>
+                		<div class="logo">
+                			<a href="#"><img src="images/logo.png" alt="" /></a>
+                		</div>
+                   </div>
+               </div>
+            </div>    
+    </div>
+    	<span class="menu-trigger"><img src="images/nav-icon.png" alt="#"></span>
+    <div id="nav">
+        	<ul>
+            	<li><a class="hvr-underline-from-center" href="index.html">HOME</a></li>
+                <li><a class="hvr-underline-from-center" href="about us.html">ABOUT US</a></li>
+                <li><a class="hvr-underline-from-center" href="as.html">CLASS TIME</a></li>
+                <li><a class="hvr-underline-from-center" href="workout of the day.html">DAILY WORKOUT</a></li>
+                <li><a class="hvr-underline-from-center" href="get started.html">GET STARTED</a></li>
+                <li><a class="hvr-underline-from-center" href="Contact us.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    <div id="banner-2">
+    	<img class="full-banner" src="images/About-us_01-02.jpg" alt="" />
+        <img class="responsive-banner" src="images/mobile-banner-1.jpg" alt="" />
+      		<div class="banner-2-text">
+            	<div class="holder">
+        			<div class="holder-2">
+                    	<h1>ABOUT US</h1>
+                    </div>
+                </div>
+        	</div>
+    </div>
+    <div id="pager">
+    	<div class="holder">
+        	<span>HOME</span>
+            <img src="images/123.png" />
+            <strong>ABOUT US</strong>
+        </div>
+    </div>
+    <div id="content">
+    	<div id="tabs">
+    		<ul id="sidemenu">
+      		<li>
+        		<a href="#about-us-content" class="open">ABOUT US</a>
+      		</li>
+        	<li>
+        		<a href="#crossfit-content">WHAT IS CROSSFIT</a>
+      		</li>
+      		<li>
+        		<a href="#our-team-content">OUR TEAM</a>
+      		</li>
+      		<li>
+        		<a href="#what-we-do-content">WHAT WE DO</a>
+      		</li>
+            <li>
+        		<a href="#else-content">SOMETHING ELSE?</a>
+      		</li>
+    	</ul>
+    		<div id="tabs-detail">
+        <div id="about-us-content" class="contentblock">
+          <div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+        </div>
+        <div id="crossfit-content" class="contentblock hidden">
+          <div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+        </div>
+        <div id="our-team-content" class="contentblock hidden">
+          <div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+        </div><!-- @end #ideas-content -->
+        
+        <div id="what-we-do-content" class="contentblock hidden">
+          <div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+        </div>
+        <div id="else-content" class="contentblock hidden">
+          <div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+        </div>
+        <!-- @end #contact-content -->
+    </div>
+  		</div>
+        <div class="acc-container">
+			<div class="acc-btn">
+            	<h1 class="selected">ABOUT US</h1>
+            </div>
+			<div class="acc-content open">
+  				<div class="acc-content-inner">
+                	<div class="tab-discription">
+        				<div class="name">
+            				<span>OUR TEAM</span>	
+            			</div>
+           			 	<div class="image">
+            				<img src="images/tabs-image.png" />
+            			</div>
+            			<div class="detail">
+            			<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+					<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            			</div>
+        			</div>
+  				</div>
+			</div>
+			<div class="acc-btn">
+            	<h1>WHAT IS CROSSFIT?</h1>
+            </div>
+			<div class="acc-content">
+  				<div class="acc-content-inner">
+    				<div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+  				</div>
+				</div>
+			<div class="acc-btn">
+        		<h1>OUR TEAM</h1>
+        	</div>
+			<div class="acc-content">
+  				<div class="acc-content-inner">
+    				<div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+  				</div>
+			</div>
+			<div class="acc-btn">
+                <h1>WHAT WE DO</h1>
+            </div>
+			<div class="acc-content">
+  				<div class="acc-content-inner">
+    				<div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>
+  				</div>
+			</div>
+            <div class="acc-btn">
+                <h1>SOMETHING ELSE?</h1>
+            </div>
+			<div class="acc-content">
+  				<div class="acc-content-inner">
+    				<div class="tab-discription">
+        	<div class="name">
+            		<span>OUR TEAM</span>	
+            	</div>
+            <div class="image">
+            	<img src="images/tabs-image.png" />
+            </div>
+            <div class="detail">
+            	<p>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In apien sed, sit duis vestibulum ultricies, placerat morbi amet vel. Lorem ipsum dolor mod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vesti adsd asd bulum ultricies, placerat morbi amet vel.</p>
+				<span>Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. </span>
+            </div>
+        </div>	
+  				</div>
+			</div>
+         </div>
+         
+        <div id="contact-us">
+        	<div class="header">
+            	<span>CONTACT US</span>
+            </div>
+            <div class="message">
+            	<input type="text" value="FULL NAME" />
+                <input type="text" value="PHONE" />
+                <input type="text" value="EMAIL ADDRESS" />
+                <input type="text" value="EMAIL ADDRESS" />
+                <input class="msg"type="text" value="EMAIL ADDRESS" />
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+    	<img class="image "src="images/contact-image.png" alt=""/>
+        	<div class="perth">
+            	<div class="holder">
+                	<div class="holder-2">
+                    	<p><span>CONTACT CROSSFIT PERTH</span></p>
+                		<a class="button hvr-fade" href="#">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="footer">
+    	<div class="holder">
+        	<div class="footer-detail">
+            	<h4>CROSSFIT PERTH</h4>
+                	<span>123 Test Street, Perth 6000 <br />9300 2506</span>
+                		<a class="email "href="mailto:admin@crossfitperth.com.au" target="_top">admin@crossfitperth.com.au</a>
+                			<span>Open Today: 9am - 5pm</span>
+                				<div class="social">
+                					<a class="icon" href="#"><img src="images/fb.png" alt="" /></a>
+                    				<a class="icon" href="#"><img src="images/tweeter-icon.png" alt="" /></a>
+                    				<a class="icon" href="#"><img src="images/youtube-icon.png" alt=""/></a>
+                   					<a class="icon "href="#"><img src="images/google-icon.png" alt=""/></a>
+                				</div>
+            </div>
+            <div class="footer-detail">
+            	<h4>QUCIK LINKS</h4>
+                <ul>
+                	<li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Class Times</a></li>
+                    <li><a href="#">workout Of The Day</a></li>
+                    <li><a href="#">Ger Started</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-detail">
+            	<h4>INFORMATION</h4>
+                <ul>
+                	<li><a href="#">What is Crossfit?</a></li>
+                    <li><a href="#">Over Team</a></li>
+                    <li><a href="#">Class Times</a></li>
+                    <li><a href="#">More Option</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                </ul>
+            </div>
+            <div class="footer-detail">
+            	<h4>DAILY WORK</h4>
+               	<ul>
+                	<li><a href="#">05 jan 2015</a></li>
+                    <li><a href="#">04 jan 2015</a></li>
+                    <li><a href="#">03 jan 2015</a></li>
+                    <li><a href="#">02 jan 2015</a></li>
+                    <li><a href="#">01 jan 2015</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-footer">
+    	<div class="holder">
+        	<span class="copyright">All rights reserved by Crossfitperth.com.au</span>
+            <span class="powered-by">Powered by <a href="#"></a></span>
+        </div>
+    </div>
+</body>
+</html>

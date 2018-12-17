@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/all.css" />
+<link rel="stylesheet" type="text/css" href="css/media query.css" />
+<link rel="stylesheet" type="text/css" href="css/hover.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+$(function() {
+	 $('#slideshow_1').cycle({
+        fx: 'scrollHorz',		
+		easing: 'easeInOutCirc',
+		speed:  700, 
+		timeout: 0,  
+        prev: '.ss1_wrapper .slideshow_prev',
+        next: '.ss1_wrapper .slideshow_next',
+		before: function(currSlideElement, nextSlideElement) {
+			var data = $('.data', $(nextSlideElement)).html();
+			$('.ss1_wrapper .slideshow_box .data').fadeOut(300, function(){
+				$('.ss1_wrapper .slideshow_box .data').remove();
+				$('<div class="data">'+data+'</div>').hide().appendTo('.ss1_wrapper .slideshow_box').fadeIn(600);
+			});
+		}
+    });
+});
+ jQuery(document).ready(function(){
+    	jQuery(".menu-trigger").click(function(){
+        	jQuery("#nav").slideToggle();
+          });
+    });
+</script>
+<title>CROSSFIT</title>
+</head>
+<body>
+	<div id="header">
+    	<img class="image" src="images/bg-header.png" alt=""/>
+        	<div class="holder">
+               <div class="holder-2">
+               		<div class="holder-3">
+                    	<div class="contact">
+                    		<div class="contact-image">
+                            	<img src="images/hotline.png" alt=""/>
+                           	</div>
+                    		<div class="contact-number">
+                            		<span>Call us on</span>
+                    				<strong>9300 2506</strong>
+                                </div>
+                		</div>
+                        <div class="social-icon">
+                    		<ul>
+								<li><a class="facebook" href="#"></a></li>
+                    			<li><a class="tweeter" href="#"></a></li>
+                    			<li><a class="youtube" href="#"></a></li>
+                    			<li><a class="google" href="#"></a></li>
+							</ul>
+                		</div>
+                		<div class="logo">
+                			<a href="#"><img src="images/logo.png" alt="" /></a>
+                		</div>
+                   </div>
+               </div>
+            </div>    
+    </div>
+    <span class="menu-trigger"><img src="images/nav-icon.png" alt="#"></span>
+    <div id="nav">
+        	<ul>
+            	<li><a class="hvr-underline-from-center" href="index.html">HOME</a></li>
+                <li><a class="hvr-underline-from-center" href="about us.html">ABOUT US</a></li>
+                <li><a class="hvr-underline-from-center" href="as.html">CLASS TIME</a></li>
+                <li><a class="hvr-underline-from-center" href="workout of the day.html">DAILY WORKOUT</a></li>
+                <li><a class="hvr-underline-from-center" href="get started.html">GET STARTED</a></li>
+                <li><a class="hvr-underline-from-center" href="Contact us.html">CONTACT US</a></li>
+            </ul>
+    </div>
+    <div id="banner">    
+    	<div class="ss1_wrapper">
+			<a href="#" class="slideshow_prev"></a>
+			<a href="#" class="slideshow_next"></a>
+				<div id="slideshow_1" class="slideshow">
+					<div class="slideshow_item">
+                        <img src="images/banner-img.jpg" alt="" />
+                        	<div class="banner-text">
+                            	<div class="holder">
+                                	<div class="holder-2">
+                                    	<p><h1>CROSSFIT PERTH</h1></p>
+                               			<p><h1>NOT YOUR AVAREGE GYM!</h1></p>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+					<div class="slideshow_item">
+                        <img src="images/banner-img-1.jpg" alt="" />
+                        	<div class="banner-text">
+                            	<div class="holder">
+                                	<div class="holder-2">
+                                    	<p><h1>CROSSFIT PERTH</h1></p>
+                               			<p><h1>NOT YOUR AVAREGE GYM!</h1></p>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+					<div class="slideshow_item">
+                        <img src="images/banner-img-2.jpg" alt="" />
+                            <div class="banner-text">
+                            	<div class="holder">
+                                	<div class="holder-2">
+                                    	<p><h1>CROSSFIT PERTH</h1></p>
+                                		<p><h1>NOT YOUR AVAREGE GYM!</h1></p>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div>
+		</div>
+    </div>
+    <div id="content">
+    	<div class="heading">
+        	<h4>CrossFit  Perth est  in  <span>2008</span>  has  built  a  fitness community  based  on  fun</h4>
+            <p>pursuit of fitness and support for all ages and abilities</p>
+        </div>
+        <div class="discription">
+        	<div class="image">
+            	<img src="images/discription-image.png" alt=""/>
+            </div>
+            <div class="detail">
+            		<span>ABOUT US</span>
+            		<p>Learn about CrossFit, and see who we are, what we do and why we do it.</p>
+                 	<a class="hvr-fade" href="#">READ MORE</a>
+            </div>
+        </div>
+        <div class="discription">
+        	<div class="image">
+            	<img src="images/discriptioin-image-1.png" alt=""/>
+            </div>
+            <div class="detail">
+            	<div class="name">
+            		<span>Workout of the day</span>	
+            	</div>
+            		<p>Workouts developed by an ex- SAS commando designed for all levels of fitness!</p>
+                 	<a class="hvr-fade" href="#">READ MORE</a>
+            </div>
+        </div>
+        <div class="discription">
+        	<div class="image">
+            	<img src="images/discription-image-2.png" alt=""/>
+            </div>
+            <div class="detail">
+            	<div class="name">
+            		<span>Get Started</span>
+            	</div>
+            		<p>Starting anything can be daunting, so we guide you in with induction training!</p>
+                 	<a class="hvr-fade" href="#">READ MORE</a>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+    	<div class="parallax"></div>
+        	<div class="perth">
+            	<div class="holder">
+                	<div class="holder-2">
+                    	<p><span>CONTACT CROSSFIT PERTH</span></p>
+                		<a class="button hvr-fade" href="#">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="footer">
+    	<div class="holder">
+        	<div class="footer-detail">
+            	<h4>CROSSFIT PERTH</h4>
+                	<span>123 Test Street, Perth 6000 <br />9300 2506</span>
+                		<a class="email "href="mailto:admin@crossfitperth.com.au" target="_top">admin@crossfitperth.com.au</a>
+                			<span>Open Today: 9am - 5pm</span>
+                				<ul class="social">
+                                    	<li><a href="#"><img src="images/fb.png" alt="" /></a></li>
+                    					<li><a href="#"><img src="images/tweeter-icon.png" alt="" /></a></li>
+                    					<li><a href="#"><img src="images/youtube-icon.png" alt=""/></a></li>
+                   						<li><a href="#"><img src="images/google-icon.png" alt=""/></a></li>
+                                    </ul>
+            </div>
+            <div class="footer-detail">
+            	<h4>QUCIK LINKS</h4>
+                <ul>
+                	<li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Class Times</a></li>
+                    <li><a href="#">workout Of The Day</a></li>
+                    <li><a href="#">Ger Started</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-detail">
+            	<h4>INFORMATION</h4>
+                <ul>
+                	<li><a href="#">What is Crossfit?</a></li>
+                    <li><a href="#">Over Team</a></li>
+                    <li><a href="#">Class Times</a></li>
+                    <li><a href="#">More Option</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                </ul>
+            </div>
+            <div class="footer-detail">
+            	<h4>DAILY WORK</h4>
+               	<ul>
+                	<li><a href="#">05 jan 2015</a></li>
+                    <li><a href="#">04 jan 2015</a></li>
+                    <li><a href="#">03 jan 2015</a></li>
+                    <li><a href="#">02 jan 2015</a></li>
+                    <li><a href="#">01 jan 2015</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-footer">
+    	<div class="holder">
+        	<span class="copyright">All rights reserved by Crossfitperth.com.au</span>
+            <span class="powered-by">Powered by <a href="#"></a></span>
+        </div>
+    </div>
+</body>
+</html>
